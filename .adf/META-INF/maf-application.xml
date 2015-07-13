@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="Digital Demo" id="com.company.DigitalDemoApp"
+                   appControllerFolder="ApplicationController"
+                   listener-class="digital.demo.application.LifeCycleListenerImpl">
+  <adfmf:description>Digital Demo</adfmf:description>
+  <adfmf:featureReference refId="digital.demo.landing" id="fr1" loginConnRefId="basic_auth"/>
+  <adfmf:featureReference refId="digital.demo.notifications" id="fr2" loginConnRefId="basic_auth"/>
+  <adfmf:featureReference refId="digital.demo.engage" id="fr3" loginConnRefId="basic_auth"/>
+  <adfmf:featureReference refId="digital.demo.selfservice" id="fr4" loginConnRefId="basic_auth"/>
+  <adfmf:featureReference refId="digital.demo.transact" id="fr5" loginConnRefId="basic_auth"/>
+  <adfmf:featureReference refId="digital.demo.configuration" id="fr6" loginConnRefId="basic_auth"/>
+  <adfmf:navigation>
+    <adfmf:navigationBar enabled="false"/>
+  </adfmf:navigation>
+  <adfmf:login defaultConnRefId="basic_auth"/>
+  <adfmf:remoteURLWhiteList>
+    <adfmf:domain id="d1">sites.digitalimpactdemo.com</adfmf:domain>
+    <adfmf:domain id="d2">blogs.oracle.com</adfmf:domain>
+    <adfmf:domain id="d3">oracle.com</adfmf:domain>
+    <adfmf:domain id="d4">community.oracle.com</adfmf:domain>
+  </adfmf:remoteURLWhiteList>
+</adfmf:application>

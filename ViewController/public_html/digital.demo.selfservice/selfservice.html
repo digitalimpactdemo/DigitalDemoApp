@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Digital Demo | Self Service Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"/>
+        <link rel="stylesheet" href="../resources/css/bootstrap.css"/>
+        <link rel="stylesheet" href="../resources/css/starter-template.css"/>
+        <link rel="stylesheet" href="../resources/css/font-awesome.min.css"/>
+        <script type="text/javascript" src="../resources/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../resources/js/maf-bridge.js"></script>
+        <script type="text/javascript" src="../../../../www/js/base.js"></script>
+        <script type="text/javascript" src="../resources/js/selfservice.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <a class="navbar-toggle" href="javascript:goToFeature('digital.demo.landing', false)">
+                    <span class="fa fa-home fa-lg"></span></a>
+                <div class="navbar-header">
+                    <span class="navbar-brand"><b class="highlight">S</b>elf Service</span>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="starter-template">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <div class="thumbnail text-center">
+                            <img onclick="javascript: editProfilePicture ();" id="profile_pic" src="../resources/img/profile.png"/>
+                            <h4 class="center-align-text"><div id="fullname"/></h4>
+                            <p class="white text-center"><div id="email"/></p>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 scrollpoint sp-effect1">
+                        <form>
+                            <div class="form-group">
+                                <label for="p1" class="col-sm-3 tp-caption label_white_bold">PIN</label>
+                                <div class="col-sm-9">
+                                    <input type="password" onkeyup="moveOnMax(this,'pin2')" class="pinPassword input-lg" name="pin1" id="pin1" maxlength="1"/>
+                                    <input type="password" onkeyup="moveOnMax(this,'pin3')" class="pinPassword input-lg" name="pin2" id="pin2" maxlength="1"/>
+                                    <input type="password" onkeyup="moveOnMax(this,'pin4')" class="pinPassword input-lg" name="pin3" id="pin3" maxlength="1"/>
+                                    <input type="password" class="pinPassword input-lg" name="pin4" id="pin4" maxlength="1"/>
+                                    <span class="help-block text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="p1" class="col-sm-3 tp-caption label_white_bold">Context</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="context" name="context" onChange="javascript: onChangeContext ();">
+                                    </select>
+                                    <span class="help-block text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="p1" class="col-sm-3 tp-caption label_white_bold">Interests</label>
+                                <div class="col-sm-9" id="interestsDiv">
+                                </div>
+                                <span class="help-block text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <button type="button" class="btn btn-primary" onClick="javascript: onSubmit ();">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

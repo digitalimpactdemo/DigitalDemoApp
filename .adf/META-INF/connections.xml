@@ -1,0 +1,51 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="apisConn" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="apisConn">
+        <Contents>
+          <restconnection name="apisConn" url="http://sites.digitalimpactdemo.com:9101/apis"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="transactURL" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="transactURL">
+        <Contents>
+          <urlconnection name="transactURL"
+                         url="http://sites.digitalimpactdemo.com:9111/webrtc_sample1/demos/audiodemo.html"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="basic_auth" className="oracle.adf.model.connection.adfmf.LoginConnection"
+             adfCredentialStoreKey="basic_auth" partial="false" manageInOracleEnterpriseManager="true" deployable="true"
+             xmlns="">
+    <Factory className="oracle.adf.model.connection.adfmf.LoginConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="adfmfLogin">
+        <Contents>
+          <login url="http://sites.digitalimpactdemo.com:9111/apis/services/security/login"/>
+          <logout url="http://a:b@sites.digitalimpactdemo.com:9111/apis/services/security/logout"/>
+          <authenticationMode value="hybrid"/>
+          <idleTimeout value="300"/>
+          <sessionTimeout value="28800"/>
+          <maxFailuresBeforeCredentialCleared value="3"/>
+          <rememberCredentials>
+            <enableRememberUserName value="true"/>
+            <rememberUserNameDefault value="true"/>
+            <enableRememberPassword value="false"/>
+            <enableStayLoggedIn value="true"/>
+            <stayLoggedInDefault value="true"/>
+          </rememberCredentials>
+          <injectCookiesToRestHttpHeader value="true"/>
+          <includeBasicAuthHeader value="true"/>
+          <accessControl url="http://sites.digitalimpactdemo.com:9111/apis/services/security/authorise"/>
+          <userObjectFilter/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

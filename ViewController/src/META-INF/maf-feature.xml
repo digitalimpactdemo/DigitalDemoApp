@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="digital.demo.landing" name="landing" securityEnabled="true">
+    <adfmf:content id="digital.demo.landing.1">
+      <adfmf:localHTML url="digital.demo.landing/landing.html"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="digital.demo.notifications" name="notifications" securityEnabled="true">
+    <adfmf:content id="digital.demo.notifications.1">
+      <adfmf:localHTML url="digital.demo.notifications/notifications.html"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="digital.demo.engage" name="engage" securityEnabled="true">
+    <adfmf:content id="digital.demo.engage.1">
+      <adfmf:localHTML url="digital.demo.engage/engage.html"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="digital.demo.selfservice" name="selfservice" securityEnabled="true">
+    <adfmf:content id="digital.demo.selfservice.1">
+      <adfmf:localHTML url="digital.demo.selfservice/selfservice.html"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="digital.demo.transact" name="transact" securityEnabled="true">
+    <adfmf:content id="digital.demo.transact.1">
+      <adfmf:remoteURL connection="transactURL"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="digital.demo.configuration" name="configuration" securityEnabled="true">
+    <adfmf:content id="digital.demo.configuration.1">
+      <adfmf:localHTML url="digital.demo.configuration/configuration.html"/>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

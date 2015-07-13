@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<maf-plugins xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/adf/mf">
+  <cordova-plugins>
+    <core-cordova-plugin id="c1" pluginId="org.apache.cordova.network-information"/>
+    <core-cordova-plugin id="c3" pluginId="org.apache.cordova.camera"/>
+    <core-cordova-plugin id="c4" pluginId="org.apache.cordova.contacts"/>
+    <core-cordova-plugin id="c5" pluginId="com.oracle.maf.email"/>
+    <core-cordova-plugin id="c6" pluginId="org.apache.cordova.geolocation"/>
+    <core-cordova-plugin id="c7" pluginId="com.phonegap.plugins.PushPlugin"/>
+    <core-cordova-plugin id="c8" pluginId="com.oracle.maf.sms"/>
+    <cordova-plugin id="c2" pluginId="com.unarin.cordova.beacon"
+                    path="../../src/plugins/cordova-plugin-ibeacon-master/">
+      <platform id="p1" name="android" enabled="true"/>
+      <platform id="p2" name="ios" enabled="true"/>
+    </cordova-plugin>
+  </cordova-plugins>
+</maf-plugins>

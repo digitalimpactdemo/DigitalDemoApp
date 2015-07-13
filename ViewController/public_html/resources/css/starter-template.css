@@ -1,0 +1,44 @@
+body {
+  padding-top: 50px;
+  #background: linear-gradient(-45deg, #66cdcc 0%, #336799 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: #66cdcc;
+  font-family: "Lato", Arial !important;
+  color: #fff;
+  font-size: 16px !important;
+}
+
+   
+.starter-template {
+  padding: 15px;
+}
+
+.pinPassword {
+    border: 1px solid #ddd;
+    width: 40px;
+    text-align: center;
+    color: #000 !important;
+    padding: 0px !important;
+}
+
+.highlight {
+    color: #cc0000;
+}
+
+.demo-icons {
+    font-size: 2.0em !important;
+    margin: 10px 0 10px;
+}
+
+.help-block li {
+    font-size: 12px;
+    list-style: none;
+}
+
+.help-block ul {
+    padding: 0;
+    margin: 0;
+}
+
+.text-danger {
+  color: #cc0000;
+}
